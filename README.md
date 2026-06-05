@@ -196,6 +196,11 @@
   </a>
 </p>
 
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=twsh0305/transmigration-encyclopedia&type=Date)](https://star-history.com/#twsh0305/transmigration-encyclopedia&Date)
+
+
 ## 许可证
 
 [MIT License](./LICENSE) — 知识自由传播，注明来源即可。
