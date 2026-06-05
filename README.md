@@ -187,6 +187,20 @@
 - **遵守**所在地区的法律法规，部分物质和操作可能受限
 - 作者和贡献者**不对**任何因参考本内容而导致的损失或伤害承担责任
 
+
+### 贡献者
+
+<p align="center">
+  <a href="https://github.com/twsh0305/transmigration-encyclopedia/graphs/contributors">
+    <img src="https://contrib.rocks/image?repo=twsh0305/transmigration-encyclopedia&max=30" alt="Contributors">
+  </a>
+</p>
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=twsh0305/transmigration-encyclopedia&type=Date)](https://star-history.com/#twsh0305/transmigration-encyclopedia&Date)
+
+
 ## 许可证
 
 [MIT License](./LICENSE) — 知识自由传播，注明来源即可。
