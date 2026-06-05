@@ -1,0 +1,138 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 280" width="900" height="280">
+  <defs>
+    <!-- 星空背景渐变 -->
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f0c29"/>
+      <stop offset="50%" style="stop-color:#302b63"/>
+      <stop offset="100%" style="stop-color:#24243e"/>
+    </linearGradient>
+    <!-- 时光隧道渐变 -->
+    <radialGradient id="portalGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#ffd700;stop-opacity:1"/>
+      <stop offset="40%" style="stop-color:#ff6b35;stop-opacity:0.8"/>
+      <stop offset="80%" style="stop-color:#7b2ff7;stop-opacity:0.4"/>
+      <stop offset="100%" style="stop-color:#7b2ff7;stop-opacity:0"/>
+    </radialGradient>
+    <!-- 光晕 -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="glowStrong">
+      <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- 星空背景 -->
+  <rect width="900" height="280" fill="url(#skyGrad)"/>
+  
+  <!-- 闪烁星星 -->
+  <g fill="#fff">
+    <circle cx="50" cy="40" r="1.5"><animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite"/></circle>
+    <circle cx="150" cy="80" r="1"><animate attributeName="opacity" values="0.5;1;0.5" dur="1.5s" repeatCount="indefinite"/></circle>
+    <circle cx="250" cy="30" r="2"><animate attributeName="opacity" values="0.2;1;0.2" dur="3s" repeatCount="indefinite"/></circle>
+    <circle cx="680" cy="50" r="1.5"><animate attributeName="opacity" values="0.4;1;0.4" dur="2.5s" repeatCount="indefinite"/></circle>
+    <circle cx="780" cy="90" r="1"><animate attributeName="opacity" values="0.3;0.9;0.3" dur="1.8s" repeatCount="indefinite"/></circle>
+    <circle cx="850" cy="40" r="2"><animate attributeName="opacity" values="0.5;1;0.5" dur="2.2s" repeatCount="indefinite"/></circle>
+    <circle cx="100" cy="200" r="1"><animate attributeName="opacity" values="0.4;1;0.4" dur="1.6s" repeatCount="indefinite"/></circle>
+    <circle cx="800" cy="220" r="1.5"><animate attributeName="opacity" values="0.3;0.8;0.3" dur="2.8s" repeatCount="indefinite"/></circle>
+    <circle cx="400" cy="25" r="1"><animate attributeName="opacity" values="0.6;1;0.6" dur="1.4s" repeatCount="indefinite"/></circle>
+    <circle cx="600" cy="250" r="1"><animate attributeName="opacity" values="0.4;1;0.4" dur="2.1s" repeatCount="indefinite"/></circle>
+  </g>
+
+  <!-- 时光隧道（左侧） -->
+  <g transform="translate(120, 140)">
+    <!-- 旋转光环 -->
+    <g>
+      <ellipse cx="0" cy="0" rx="70" ry="70" fill="none" stroke="#ffd700" stroke-width="2" opacity="0.6">
+        <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="8s" repeatCount="indefinite"/>
+      </ellipse>
+      <ellipse cx="0" cy="0" rx="55" ry="55" fill="none" stroke="#ff6b35" stroke-width="2" opacity="0.5">
+        <animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="6s" repeatCount="indefinite"/>
+      </ellipse>
+      <ellipse cx="0" cy="0" rx="40" ry="40" fill="none" stroke="#7b2ff7" stroke-width="2" opacity="0.7">
+        <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="4s" repeatCount="indefinite"/>
+      </ellipse>
+    </g>
+    <!-- 中心光点 -->
+    <circle cx="0" cy="0" r="15" fill="url(#portalGrad)" filter="url(#glowStrong)">
+      <animate attributeName="r" values="12;18;12" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <!-- 穿越粒子 -->
+    <g fill="#ffd700" filter="url(#glow)">
+      <circle cx="0" cy="0" r="2">
+        <animateMotion path="M0,0 L80,0" dur="1.5s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="1;0" dur="1.5s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="0" cy="0" r="2">
+        <animateMotion path="M0,0 L-60,50" dur="1.8s" repeatCount="indefinite" begin="0.3s"/>
+        <animate attributeName="opacity" values="1;0" dur="1.8s" repeatCount="indefinite" begin="0.3s"/>
+      </circle>
+      <circle cx="0" cy="0" r="2">
+        <animateMotion path="M0,0 L50,-60" dur="1.3s" repeatCount="indefinite" begin="0.6s"/>
+        <animate attributeName="opacity" values="1;0" dur="1.3s" repeatCount="indefinite" begin="0.6s"/>
+      </circle>
+    </g>
+    <!-- 标签 -->
+    <text x="0" y="95" text-anchor="middle" fill="#ffd700" font-size="12" font-family="serif" opacity="0.8">⚡ 穿越中...</text>
+  </g>
+
+  <!-- 标题区域（中央） -->
+  <g transform="translate(450, 100)">
+    <!-- 装饰线 -->
+    <line x1="-180" y1="-35" x2="-80" y2="-35" stroke="#ffd700" stroke-width="1" opacity="0.5"/>
+    <line x1="80" y1="-35" x2="180" y2="-35" stroke="#ffd700" stroke-width="1" opacity="0.5"/>
+    <text x="0" y="-20" text-anchor="middle" fill="#ffd700" font-size="14" font-family="serif" letter-spacing="8" opacity="0.7">✦ 穿越百科全书 ✦</text>
+    
+    <!-- 主标题 -->
+    <text x="0" y="30" text-anchor="middle" fill="#fff" font-size="42" font-weight="bold" font-family="serif" filter="url(#glow)">
+      穿越百科全书
+      <animate attributeName="opacity" values="0.9;1;0.9" dur="3s" repeatCount="indefinite"/>
+    </text>
+    
+    <!-- 副标题 -->
+    <text x="0" y="70" text-anchor="middle" fill="#aaa" font-size="16" font-family="sans-serif">
+      如果我穿越了，我能活下去吗？
+    </text>
+    
+    <!-- 底部装饰 -->
+    <line x1="-120" y1="90" x2="120" y2="90" stroke="#ffd700" stroke-width="0.5" opacity="0.4"/>
+  </g>
+
+  <!-- 右侧：书本/卷轴图标 -->
+  <g transform="translate(780, 140)">
+    <!-- 打开的书本 -->
+    <g fill="none" stroke="#ffd700" stroke-width="2" opacity="0.7">
+      <!-- 左页 -->
+      <path d="M-30,-25 Q-30,-30 -25,-30 L-5,-30 L-5,25 Q-5,30 -10,30 L-25,30 Q-30,30 -30,25 Z">
+        <animate attributeName="opacity" values="0.5;0.8;0.5" dur="4s" repeatCount="indefinite"/>
+      </path>
+      <!-- 右页 -->
+      <path d="M5,-30 Q5,-30 10,-30 L25,-30 Q30,-30 30,-25 L30,25 Q30,30 25,30 L10,30 Q5,30 5,25 Z">
+        <animate attributeName="opacity" values="0.5;0.8;0.5" dur="4s" repeatCount="indefinite" begin="0.5s"/>
+      </path>
+      <!-- 书脊 -->
+      <line x1="0" y1="-30" x2="0" y2="30"/>
+    </g>
+    <!-- 翻页动画 -->
+    <path d="M0,-25 Q15,-20 25,-15" fill="none" stroke="#ffd700" stroke-width="1" opacity="0.4">
+      <animate attributeName="d" values="M0,-25 Q15,-20 25,-15;M0,-25 Q20,-10 25,5;M0,-25 Q15,-20 25,-15" dur="3s" repeatCount="indefinite"/>
+    </path>
+    <!-- 发光文字 -->
+    <text x="0" y="55" text-anchor="middle" fill="#ffd700" font-size="11" font-family="serif" opacity="0.6">✦ 求生 · 造物 · 问道 ✦</text>
+  </g>
+
+  <!-- 底部流动光线 -->
+  <g stroke="#ffd700" stroke-width="1" fill="none" opacity="0.3">
+    <path d="M0,260 Q225,250 450,260 Q675,270 900,260">
+      <animate attributeName="d" values="M0,260 Q225,250 450,260 Q675,270 900,260;M0,260 Q225,270 450,260 Q675,250 900,260;M0,260 Q225,250 450,260 Q675,270 900,260" dur="6s" repeatCount="indefinite"/>
+    </path>
+  </g>
+</svg>
