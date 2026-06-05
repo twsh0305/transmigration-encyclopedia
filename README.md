@@ -190,15 +190,11 @@
 
 ### 贡献者
 
-<a href="#">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/badge/贡献者-招募中-8A2BE2?style=flat-square">
-    <img src="https://img.shields.io/badge/贡献者-招募中-8A2BE2?style=flat-square" alt="Contributors">
-  </picture>
-</a>
-
-> 📢 项目正在建设中，欢迎通过 [CONTRIBUTING.md](./CONTRIBUTING.md) 参与贡献！
-> 等仓库公开后，此处会自动显示贡献者头像墙。
+<p align="center">
+  <a href="https://github.com/twsh0305/transmigration-encyclopedia/graphs/contributors">
+    <img src="https://contrib.rocks/image?repo=twsh0305/transmigration-encyclopedia&max=30" alt="Contributors">
+  </a>
+</p>
 
 ## 许可证
 
