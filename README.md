@@ -190,13 +190,15 @@
 
 ### 贡献者
 
-<p align="center">
-<img src="https://opencollective.com/transmigration-encyclopedia/contributors.svg?width=890&button=false" alt="Contributors">
-</p>
+<a href="#">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/badge/贡献者-招募中-8A2BE2?style=flat-square">
+    <img src="https://img.shields.io/badge/贡献者-招募中-8A2BE2?style=flat-square" alt="Contributors">
+  </picture>
+</a>
 
-## Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=twsh0305/transmigration-encyclopedia&type=Date)](https://star-history.com/#twsh0305/transmigration-encyclopedia&Date)
+> 📢 项目正在建设中，欢迎通过 [CONTRIBUTING.md](./CONTRIBUTING.md) 参与贡献！
+> 等仓库公开后，此处会自动显示贡献者头像墙。
 
 ## 许可证
 
